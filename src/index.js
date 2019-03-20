@@ -5,20 +5,17 @@
 module.exports = function getLoveTrianglesCount(preferences = []) {
   // your implementation
   preferences.unshift(0);
-  var one;
-  var two;
-  var three;
   var count = 0;
   for (var i = 0; i < preferences.length; i++) {
-    one = preferences[i];
-    two = preferences[one];
-    three = preferences[two];
+   var one = preferences[i];
+    var two = preferences[one];
+    var three = preferences[two];
 
     if (( one !== i ) && (one !==0) &&(two !==0) && (three !==0) &&  
         (two !== one) && (two !== i) &&
         (i == three)) {
 
-      count = count++;
+      count = ++count;
     }
 
   }
